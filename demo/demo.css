@@ -1,0 +1,88 @@
+div#container {
+	width: 80%;
+	height: fit-content;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+div#header, div#jumborton{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 100%;
+}
+
+div#request-origin{
+	float: right;
+}
+
+div#request-headers-input-list	{
+	list-style: none;
+}
+
+div#requests-column	{
+	border-left: black dashed 2px;
+	border-right: black dashed 2px;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	max-height: 50rem;
+	overflow-y: scroll;
+}
+
+div#requests-column > div:nth-child(2n) {
+	background: #ccc;
+}
+
+span.network-demarcator {
+	position: absolute;
+	height: 100%;
+	width: 0;
+	border-right: red dashed 2px;
+	z-index: 2;
+}
+
+span#internal_address {
+	left: 0%;
+}
+
+span#external_address {
+	left: 40%;
+}
+
+div.diagram-entry {
+	padding-bottom: 1rem;
+	border-top: black solid 1px;
+	position: relative;
+}
+
+div.diagram-entry span.diagram-entry-arrow {
+	/*display: none;*/
+	top: -10px;
+	position: absolute;
+}
+
+div.diagram-entry.request {
+	text-align: right;
+	padding-right: 0.4rem;
+}
+
+div.diagram-entry.response {
+	text-align: left;
+	padding-left: 0.4rem;
+}
+
+div.diagram-entry.request span.diagram-entry-arrow {
+	right: 0;
+}
+
+div.diagram-entry.response span.diagram-entry-arrow {
+	left: 0;
+	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+}
+
