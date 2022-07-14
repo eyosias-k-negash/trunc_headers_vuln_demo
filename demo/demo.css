@@ -30,7 +30,7 @@ div#requests-column	{
 	border-right: black dashed 2px;
 	margin-right: 1rem;
 	margin-left: 1rem;
-	max-height: 50rem;
+	max-height: 40rem;
 	overflow-y: scroll;
 }
 
