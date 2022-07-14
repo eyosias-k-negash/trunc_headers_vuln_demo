@@ -1,0 +1,24 @@
+--- original_simple_server.py	2022-07-10 23:00:38.304131943 +0300
++++ /usr/lib/python2.7/wsgiref/simple_server.py	2022-07-10 22:57:40.765480273 +0300
+@@ -139,7 +139,7 @@
+     print >>stdout
+     h = environ.items(); h.sort()
+     for k,v in h:
+-        print >>stdout, k,'=', repr(v)
++        if k.find("HTTP_") == 0:print >>stdout, k,'=', repr(v)
+     start_response("200 OK", [('Content-Type','text/plain')])
+     return [stdout.getvalue()]
+ 
+@@ -157,7 +157,8 @@
+     httpd = make_server('', 8000, demo_app)
+     sa = httpd.socket.getsockname()
+     print "Serving HTTP on", sa[0], "port", sa[1], "..."
+-    import webbrowser
+-    webbrowser.open('http://localhost:8000/xyz?abc')
+-    httpd.handle_request()  # serve one request, then exit
+-    httpd.server_close()
++    # import webbrowser
++    # webbrowser.open('http://localhost:8000/xyz?abc')
++    httpd.serve_forever()  # serve forever
++    # httpd.handle_request()  # serve one request, then exit
++    # httpd.server_close()
