@@ -20,7 +20,7 @@ git clone https://github.com/eyosias-k-negash/trunc_headers_vuln_demo.git
 cd trunc_headers_vuln_demo
 docker build -t trunc_headers_vuln_demo .
 docker run -it -p 80:80 trunc_headers_vuln_demo
-
+```
 
 ## Demonstration video
 ![Getting up and running](https://github.com/eyosias-k-negash/trunc_headers_vuln_demo/raw/master/demo%202022-07-15%2003-14.gif)
