@@ -21,6 +21,7 @@ cd trunc_headers_vuln_demo
 docker build -t trunc_headers_vuln_demo .
 docker run -it -p 80:80 trunc_headers_vuln_demo
 ```
+Visit to access the demonstration http[:]//127.0.0.1/demo.html.
 
 ## Demonstration video
 ![Getting up and running](https://github.com/eyosias-k-negash/trunc_headers_vuln_demo/raw/master/demo%202022-07-15%2003-14.gif)
