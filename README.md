@@ -1,7 +1,7 @@
 # trunc_headers_vuln_demo
 
 # about the image
-trunc_headers_vuln_demo is a docker image put together to showcase a vulnerability discussed in this link blog.
+trunc_headers_vuln_demo is a docker image put together to showcase a vulnerability discussed in the blog.
 
 At the expense of clarity this demo is built in to one image in order to avoid space usage and complexity brought by separate services hosting each component. This image has 3 components listed here and desribed in READMEs they reside in.
 
